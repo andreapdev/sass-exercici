@@ -1,0 +1,360 @@
+/*COLORS
+i) Block 1: #244F75;
+ii) Block 2: #60BFBF;
+iii) Block 3: #8C4B7E;
+iv) Block 4: #F8BB44;
+v) Block 5: #F24B4B;
+*/
+*, *:before {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  color: white;
+  font-size: 5vw;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+}
+
+.parent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.block1 {
+  background-color: #244F75;
+  width: 20%;
+  text-align: center;
+  line-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: -20%;
+  cursor: pointer;
+  -webkit-transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  margin-right: 0.2vw;
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+  -webkit-animation-name: anim1;
+  animation-name: anim1;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.block1 .block1-content {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.block1 .block1-content::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  opacity: 0.1;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transform: skew(30deg) scaleY(1) translate(0, 0);
+  transform: skew(30deg) scaleY(1) translate(0, 0);
+  -webkit-transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.block1 .block1-content:hover:before {
+  -webkit-transform: skew(0deg) scale(3) translate(0, 0);
+  transform: skew(0deg) scale(3) translate(0, 0);
+  opacity: 0.1;
+}
+
+.block2 {
+  background-color: #60BFBF;
+  width: 20%;
+  text-align: center;
+  line-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  top: -100%;
+  left: 0;
+  cursor: pointer;
+  -webkit-transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  margin-right: 0.2vw;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+  -webkit-animation-name: anim2;
+  animation-name: anim2;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.block2 .block2-content {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.block2 .block2-content::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  opacity: 0.1;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transform: skew(30deg) scaleY(1) translate(0, 0);
+  transform: skew(30deg) scaleY(1) translate(0, 0);
+  -webkit-transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.block2 .block2-content:hover:before {
+  -webkit-transform: skew(0deg) scale(3) translate(0, 0);
+  transform: skew(0deg) scale(3) translate(0, 0);
+  opacity: 0.1;
+}
+
+.block3 {
+  background-color: #8C4B7E;
+  width: 20%;
+  text-align: center;
+  line-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  top: 100%;
+  left: 0;
+  cursor: pointer;
+  -webkit-transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  margin-right: 0.2vw;
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+  -webkit-animation-name: anim3;
+  animation-name: anim3;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+
+.block3 .block3-content {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.block3 .block3-content::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  opacity: 0.1;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transform: skew(30deg) scaleY(1) translate(0, 0);
+  transform: skew(30deg) scaleY(1) translate(0, 0);
+  -webkit-transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.block3 .block3-content:hover:before {
+  -webkit-transform: skew(0deg) scale(3) translate(0, 0);
+  transform: skew(0deg) scale(3) translate(0, 0);
+  opacity: 0.1;
+}
+
+.block4 {
+  background-color: #F8BB44;
+  width: 20%;
+  text-align: center;
+  line-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  top: -100%;
+  left: 0;
+  cursor: pointer;
+  -webkit-transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  margin-right: 0.2vw;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+  -webkit-animation-name: anim4;
+  animation-name: anim4;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.block4 .block4-content {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.block4 .block4-content::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  opacity: 0.1;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transform: skew(30deg) scaleY(1) translate(0, 0);
+  transform: skew(30deg) scaleY(1) translate(0, 0);
+  -webkit-transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.block4 .block4-content:hover:before {
+  -webkit-transform: skew(0deg) scale(3) translate(0, 0);
+  transform: skew(0deg) scale(3) translate(0, 0);
+  opacity: 0.1;
+}
+
+.block5 {
+  background-color: #F24B4B;
+  width: 20%;
+  text-align: center;
+  line-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 20%;
+  cursor: pointer;
+  -webkit-transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+  -webkit-animation-name: anim5;
+  animation-name: anim5;
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+}
+
+.block5 .block5-content {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.block5 .block5-content::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  opacity: 0.1;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transform: skew(30deg) scaleY(1) translate(0, 0);
+  transform: skew(30deg) scaleY(1) translate(0, 0);
+  -webkit-transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.block5 .block5-content:hover:before {
+  -webkit-transform: skew(0deg) scale(3) translate(0, 0);
+  transform: skew(0deg) scale(3) translate(0, 0);
+  opacity: 0.1;
+}
+/*# sourceMappingURL=style.css.map */

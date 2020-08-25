@@ -1,0 +1,164 @@
+
+/*COLORS
+i) Block 1: #244F75;
+ii) Block 2: #60BFBF;
+iii) Block 3: #8C4B7E;
+iv) Block 4: #F8BB44;
+v) Block 5: #F24B4B;
+*/
+
+
+@mixin blockmix($color, $top, $left){
+    background-color: $color;
+    width: 20%;
+    text-align: center;
+    line-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    top:$top;
+    left: $left;
+    cursor: pointer;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@mixin animationmix($x, $y, $z, $name, $delay){
+    -webkit-transform: translate3d($x, $y, $z);
+        transform: translate3d($x, $y, $z);
+    -webkit-animation-name: $name;
+        animation-name: $name;
+    -webkit-animation-delay: $delay;
+        animation-delay: $delay;
+}
+
+@mixin beforemix(){
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0.1;
+    
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-transform: skew(30deg) scaleY(1) translate(0, 0);
+            transform: skew(30deg) scaleY(1) translate(0, 0);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+ @mixin contentmix(){
+    -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+    -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+        animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+    -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+ }
+ @mixin hovermix(){
+    -webkit-transform: skew(0deg) scale(3) translate(0, 0);
+        transform: skew(0deg) scale(3) translate(0, 0);
+    opacity: 0.1;
+ }
+
+*, *:before{
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    color: white;
+    font-size: 5vw;
+    margin: 0;
+    padding: 0;
+	-webkit-box-sizing: border-box;
+}
+
+.parent{
+    display: flex;
+    align-items: stretch;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;   
+}
+
+
+.block1{
+    @include blockmix(#244F75, 0, -20%);
+    margin-right: 0.2vw;
+    @include animationmix(100%, 0, 0, anim1, 0.5s);
+    .block1-content{
+        @include contentmix();
+    }
+    .block1-content::before{
+        @include beforemix();
+    }
+    .block1-content:hover:before{
+        @include hovermix();
+    }
+}
+.block2{
+    @include blockmix(#60BFBF, -100%, 0);
+    margin-right: 0.2vw;
+    @include animationmix(0, 100%, 0, anim2, 1s);
+    .block2-content{
+        @include contentmix();
+    }
+    .block2-content::before{
+        @include beforemix();
+    }
+    .block2-content:hover:before{
+        @include hovermix();
+    }
+
+}
+.block3{
+    @include blockmix(#8C4B7E, 100%, 0);
+    margin-right: 0.2vw;
+    @include animationmix(0, -100%, 0, anim3, 1.5s);
+    .block3-content{
+        @include contentmix();
+    }
+    .block3-content::before{
+        @include beforemix()
+    }
+    .block3-content:hover:before{
+        @include hovermix();
+    }
+}
+.block4{
+    @include blockmix(#F8BB44, -100%, 0);
+    margin-right: 0.2vw;
+    @include animationmix(0, 100%, 0, anim4, 2s);
+    .block4-content{
+        @include contentmix();
+    }
+    .block4-content::before{
+        @include beforemix();
+    }
+    .block4-content:hover:before{
+        @include hovermix();
+    }
+}
+.block5{
+    @include blockmix(#F24B4B, 0, 20%);
+    @include animationmix(-100%, 0, 0, anim5, 2.5s);
+    .block5-content{
+        @include contentmix();
+    }
+    .block5-content::before{
+        @include beforemix();
+    }
+    .block5-content:hover:before{
+        @include hovermix();
+    }
+}
+
